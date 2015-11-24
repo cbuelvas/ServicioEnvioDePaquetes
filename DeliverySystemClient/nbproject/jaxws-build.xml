@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-ServicioClientes" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ServicioClientes"/>
+        <property name="wsdl-ServicioClientes" location="xml-resources/web-service-references/ServicioClientes/wsdl/pkgdlvry.azurewebsites.net/ServicioClientes.asmx.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ServicioClientes" destdir="${build.generated.dir}/jax-wsCache/ServicioClientes" wsdl="${wsdl-ServicioClientes}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://pkgdlvry.azurewebsites.net/ServicioClientes.asmx?WSDL" xnocompile="true" xendorsed="true" package="Services">
+            <depends file="${wsdl-ServicioClientes}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ServicioClientes"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ServicioClientes">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ServicioClientes" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ServicioClientes"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/Services"/>
+    </target>
+    <target name="wsimport-client-ServicioEnvioDePaquetes" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ServicioEnvioDePaquetes"/>
+        <property name="wsdl-ServicioEnvioDePaquetes" location="xml-resources/web-service-references/ServicioEnvioDePaquetes/wsdl/pkgdlvry.azurewebsites.net/ServicioEnvioDePaquetes.asmx.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ServicioEnvioDePaquetes" destdir="${build.generated.dir}/jax-wsCache/ServicioEnvioDePaquetes" wsdl="${wsdl-ServicioEnvioDePaquetes}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://pkgdlvry.azurewebsites.net/ServicioEnvioDePaquetes.asmx?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-ServicioEnvioDePaquetes}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ServicioEnvioDePaquetes"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ServicioEnvioDePaquetes">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ServicioEnvioDePaquetes" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ServicioEnvioDePaquetes"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/tempuri"/>
+    </target>
+    <target name="wsimport-client-ServicioFacturas" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ServicioFacturas"/>
+        <property name="wsdl-ServicioFacturas" location="xml-resources/web-service-references/ServicioFacturas/wsdl/pkgdlvry.azurewebsites.net/ServicioFacturas.asmx.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ServicioFacturas" destdir="${build.generated.dir}/jax-wsCache/ServicioFacturas" wsdl="${wsdl-ServicioFacturas}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://pkgdlvry.azurewebsites.net/ServicioFacturas.asmx?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-ServicioFacturas}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ServicioFacturas"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ServicioFacturas">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ServicioFacturas" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ServicioFacturas"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/tempuri"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-ServicioClientes, wsimport-client-ServicioEnvioDePaquetes, wsimport-client-ServicioFacturas"/>
+</project>

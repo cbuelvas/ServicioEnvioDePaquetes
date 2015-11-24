@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:4392/ServicioEnvioDePaquetes.asmx?WSDL" uri="xml-resources/web-service-references/ServicioEnvioDePaquetes/wsdl/localhost_4392/ServicioEnvioDePaquetes.asmx.wsdl"/>
+    <system systemId="http://localhost:4392/ServicioClientes.asmx?WSDL" uri="xml-resources/web-service-references/ServicioClientes/wsdl/localhost_4392/ServicioClientes.asmx.wsdl"/>
+    <system systemId="http://localhost:4392/ServicioFacturas.asmx?WSDL" uri="xml-resources/web-service-references/ServicioFacturas/wsdl/localhost_4392/ServicioFacturas.asmx.wsdl"/>
+    <system systemId="http://pkgdlvry.azurewebsites.net/ServicioClientes.asmx?WSDL" uri="xml-resources/web-service-references/ServicioClientes/wsdl/pkgdlvry.azurewebsites.net/ServicioClientes.asmx.wsdl"/>
+    <system systemId="http://pkgdlvry.azurewebsites.net/ServicioEnvioDePaquetes.asmx?WSDL" uri="xml-resources/web-service-references/ServicioEnvioDePaquetes/wsdl/pkgdlvry.azurewebsites.net/ServicioEnvioDePaquetes.asmx.wsdl"/>
+    <system systemId="http://pkgdlvry.azurewebsites.net/ServicioFacturas.asmx?WSDL" uri="xml-resources/web-service-references/ServicioFacturas/wsdl/pkgdlvry.azurewebsites.net/ServicioFacturas.asmx.wsdl"/>
+</catalog>

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="addPaquetes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Codigo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Direccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pais" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Departamento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodPosRemitente" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodPosDestinatario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Peso" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="CostoPorGramos" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addPaquetesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="showPackages">
+        <s:complexType />
+      </s:element>
+      <s:element name="showPackagesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="showPackagesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addTDP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Codigo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Direccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pais" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Departamento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodPosRemitente" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodPosDestinatario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Peso" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="CostoPorGramos" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cuota" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addTDPResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="showTDP">
+        <s:complexType />
+      </s:element>
+      <s:element name="showTDPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="showTDPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addNightPackage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Codigo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Direccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pais" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Departamento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodPosRemitente" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodPosDestinatario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Peso" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="CostoPorGramos" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cuota" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addNightPackageResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="showNightPackages">
+        <s:complexType />
+      </s:element>
+      <s:element name="showNightPackagesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="showNightPackagesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="showPkgByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="showPkgByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="showPkgByIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="addPaquetesSoapIn">
+    <wsdl:part name="parameters" element="tns:addPaquetes" />
+  </wsdl:message>
+  <wsdl:message name="addPaquetesSoapOut">
+    <wsdl:part name="parameters" element="tns:addPaquetesResponse" />
+  </wsdl:message>
+  <wsdl:message name="showPackagesSoapIn">
+    <wsdl:part name="parameters" element="tns:showPackages" />
+  </wsdl:message>
+  <wsdl:message name="showPackagesSoapOut">
+    <wsdl:part name="parameters" element="tns:showPackagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="addTDPSoapIn">
+    <wsdl:part name="parameters" element="tns:addTDP" />
+  </wsdl:message>
+  <wsdl:message name="addTDPSoapOut">
+    <wsdl:part name="parameters" element="tns:addTDPResponse" />
+  </wsdl:message>
+  <wsdl:message name="showTDPSoapIn">
+    <wsdl:part name="parameters" element="tns:showTDP" />
+  </wsdl:message>
+  <wsdl:message name="showTDPSoapOut">
+    <wsdl:part name="parameters" element="tns:showTDPResponse" />
+  </wsdl:message>
+  <wsdl:message name="addNightPackageSoapIn">
+    <wsdl:part name="parameters" element="tns:addNightPackage" />
+  </wsdl:message>
+  <wsdl:message name="addNightPackageSoapOut">
+    <wsdl:part name="parameters" element="tns:addNightPackageResponse" />
+  </wsdl:message>
+  <wsdl:message name="showNightPackagesSoapIn">
+    <wsdl:part name="parameters" element="tns:showNightPackages" />
+  </wsdl:message>
+  <wsdl:message name="showNightPackagesSoapOut">
+    <wsdl:part name="parameters" element="tns:showNightPackagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="showPkgByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:showPkgByID" />
+  </wsdl:message>
+  <wsdl:message name="showPkgByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:showPkgByIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServicioEnvioDePaquetesSoap">
+    <wsdl:operation name="addPaquetes">
+      <wsdl:input message="tns:addPaquetesSoapIn" />
+      <wsdl:output message="tns:addPaquetesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="showPackages">
+      <wsdl:input message="tns:showPackagesSoapIn" />
+      <wsdl:output message="tns:showPackagesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="addTDP">
+      <wsdl:input message="tns:addTDPSoapIn" />
+      <wsdl:output message="tns:addTDPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="showTDP">
+      <wsdl:input message="tns:showTDPSoapIn" />
+      <wsdl:output message="tns:showTDPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="addNightPackage">
+      <wsdl:input message="tns:addNightPackageSoapIn" />
+      <wsdl:output message="tns:addNightPackageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="showNightPackages">
+      <wsdl:input message="tns:showNightPackagesSoapIn" />
+      <wsdl:output message="tns:showNightPackagesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="showPkgByID">
+      <wsdl:input message="tns:showPkgByIDSoapIn" />
+      <wsdl:output message="tns:showPkgByIDSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicioEnvioDePaquetesSoap" type="tns:ServicioEnvioDePaquetesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="addPaquetes">
+      <soap:operation soapAction="http://tempuri.org/addPaquetes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showPackages">
+      <soap:operation soapAction="http://tempuri.org/showPackages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addTDP">
+      <soap:operation soapAction="http://tempuri.org/addTDP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showTDP">
+      <soap:operation soapAction="http://tempuri.org/showTDP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNightPackage">
+      <soap:operation soapAction="http://tempuri.org/addNightPackage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showNightPackages">
+      <soap:operation soapAction="http://tempuri.org/showNightPackages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showPkgByID">
+      <soap:operation soapAction="http://tempuri.org/showPkgByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicioEnvioDePaquetesSoap12" type="tns:ServicioEnvioDePaquetesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="addPaquetes">
+      <soap12:operation soapAction="http://tempuri.org/addPaquetes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showPackages">
+      <soap12:operation soapAction="http://tempuri.org/showPackages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addTDP">
+      <soap12:operation soapAction="http://tempuri.org/addTDP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showTDP">
+      <soap12:operation soapAction="http://tempuri.org/showTDP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNightPackage">
+      <soap12:operation soapAction="http://tempuri.org/addNightPackage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showNightPackages">
+      <soap12:operation soapAction="http://tempuri.org/showNightPackages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showPkgByID">
+      <soap12:operation soapAction="http://tempuri.org/showPkgByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioEnvioDePaquetes">
+    <wsdl:port name="ServicioEnvioDePaquetesSoap" binding="tns:ServicioEnvioDePaquetesSoap">
+      <soap:address location="http://pkgdlvry.azurewebsites.net/ServicioEnvioDePaquetes.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicioEnvioDePaquetesSoap12" binding="tns:ServicioEnvioDePaquetesSoap12">
+      <soap12:address location="http://pkgdlvry.azurewebsites.net/ServicioEnvioDePaquetes.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
